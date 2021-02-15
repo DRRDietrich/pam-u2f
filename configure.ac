@@ -42,7 +42,8 @@ AC_SEARCH_LIBS([pam_modutil_drop_priv], ["pam"], [AC_DEFINE([HAVE_PAM_MODUTIL_DR
 
 case "$host" in
      *darwin*)  PAMDIR="/usr/lib/pam";;
-     *linux*)   PAMDIR="/lib/x86_64-linux-gnu/security";;
+# Fedora
+     *linux*)   PAMDIR="/lib64/security/";;
      *)         PAMDIR="/usr/lib"
 esac
 AC_ARG_WITH(pam-dir,
